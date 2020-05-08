@@ -5,7 +5,7 @@ int main() {
 	int num = 0; //Benutzerfreundliche Eingabe des Wertebereichs
 	while (num == 0) {
 		printf("Geben sie das Maximum des Wertebereichs an von dem sie alle Primzahlen wissen wollen: \n");
-		scanf_s("%d", &num);
+		scanf("%d", &num);
 		if (num < 0) {
 			printf("Geben sie eine positive Zahl ein!\n");
 			num = 0;
