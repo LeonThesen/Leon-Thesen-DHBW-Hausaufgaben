@@ -123,3 +123,14 @@ int main() {
 
     return 0;
 }
+
+
+/*
+JW-2020-05-12:
+--------------
+> nice implementation! (9/10) 
+> missing extra lib (*.c + *.h) incl. includegard includeguards: -1 Pkt
+> missing abort criteria max iterations: -1P
+    > this can be used to reserve storage for "funktion" and "stelle". so u dont need to perform the newton algo twice
+> very nice idea of user input of poly grad 5 and the resulting calculation of the derivative: +1P :-) !
+*/
