@@ -135,7 +135,7 @@ case 3: //multiply
 case 4: //divide
     zahl_ergebnis=dividieren(zahl1,zahl2);
     break;
-}
+} // JW-2020-05-19: missing default statement for values > 4: -0.5Pkt
 
 //ausgabe
 
@@ -152,11 +152,18 @@ case 2:         //euler
 case 3:
     printf("Ergebnis: %.3lf * cos(%.3lf)+ %.3lf * i * sin(%.3lf)",betrag(zahl_ergebnis),phi(zahl_ergebnis),betrag(zahl_ergebnis),phi(zahl_ergebnis));
     break;
-}
+} // JW-2020-05-19: missing default statement for values > 3: -0.5Pkt
 
 getchar();
 getchar();
 getchar();
 return 0;
 }
-
+/*
+JW-2020-05-19:
+--------------
+> very nice implementation! (11/10) 
+> default statement in switches: -1Pkt
+> bonus well done: +2Pkt
+> nice use of functions returning a struct :-) 
+*/
