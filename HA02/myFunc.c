@@ -59,7 +59,7 @@ komplex dividieren(komplex number1, komplex number2) {
 	double r,winkel;
 	double bogen = 180.0 / PI;
 	r=betrag(number1)/betrag(number2);
-	winkel=phi(number1) - phi(number2);
+	winkel=phi(number1) - (phi(number2));
 	number_temp.real= r*cos(winkel/bogen);
 	number_temp.imag= r*sin(winkel/bogen);
 	return number_temp;
