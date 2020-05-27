@@ -100,7 +100,7 @@ int saveList(listElement *start){
 
         printf("list was successfully saved!\n");
         fclose(fPtr);	
-        // please add a >return< statement as this function is of type int
+        return 0;
 }
 
 
