@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "HA03_linkedListLib.h"
+#include "HA03_Leon_Thesen_linkedListLib.h" // JW 2020-05-27: dont forget to rename the includes as well !
 
 void addListElem(listElement *start){
     
@@ -100,6 +100,7 @@ int saveList(listElement *start){
 
         printf("list was successfully saved!\n");
         fclose(fPtr);	
+        // please add a >return< statement as this function is of type int
 }
 
 
@@ -113,7 +114,7 @@ int loadList(listElement *start){
 
 	printf("\nloading data...\n\n");
 	printf("availible data: \n----------------\n");
-	system("dir /b *.txt"); // dir /b *.txt for windows | print availible *.txt files in current location
+	system("ls /b *.txt"); // dir /b *.txt for windows | print availible *.txt files in current location
 	printf("\nfilename without extension: ");
 	scanf("%s",filename);
 	strcat(filename, ".txt"); // adding .txt to file name
@@ -170,6 +171,12 @@ void stringToLower(char *string) {
     printf("\n>>stringToLower fcn is tbd.\n\n");
 
 }
+/*
+JW-2020-05-27:
+--------------
+> well done (9/10) 
+> missing return statement in int function: -1Pkt
+*/
 
 
 

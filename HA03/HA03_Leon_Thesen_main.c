@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "HA03_linkedListLib.h"
+#include "HA03_Leon_Thesen_linkedListLib.h" // JW 2020-05-27: dont forget to rename the includes as well !
 /*******************************************************
 * NAME: HA03_main.c (main) 
 *
