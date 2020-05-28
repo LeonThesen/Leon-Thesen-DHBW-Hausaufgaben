@@ -156,9 +156,19 @@ int loadList(listElement *start){
 
 void exitFcn(listElement *start){
 
-    printf("\n>> exitFcn fcn is tbd.\n\n");
+  int saveFlagg = 0;
+
+  printf("do you want to save the current list?\n");
+  printf("[1] ... yes\n");
+  printf("[0] ... no\n");
+  scanf("%d",&saveFlagg);
+
+  if (saveFlagg == 1) saveList(start);
+  system("cls");
+
 
 }
+
 
 void sortList(listElement *start){
 	
