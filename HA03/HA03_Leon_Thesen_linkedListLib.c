@@ -87,10 +87,8 @@ void delList(listElement *start){
         currElem->nextElem=(currElem->nextElem)->nextElem;
         free(delElem);
     }
-    
-
 }
-
+}
 int getLenOfList(listElement *start){ // we use this for save list fcn
 
     int counter = 0;
