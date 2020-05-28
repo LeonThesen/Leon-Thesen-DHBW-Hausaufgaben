@@ -46,18 +46,49 @@ void printList(listElement *start){
     }
 }
 
+
 void delListElem(listElement *start){
 
-    printf("\n>> delListElem fcn is tbd.\n\n");
+  if(start->nextElem == NULL) printf("list is empty\n");
+  else{
 
+    int idxToDel = 0;
+    printList(start);
+    printf("please enter index of list element to delete...\n");
+    scanf("%d",&idxToDel);
+
+    if(getLenOfList(start)-1 < idxToDel){
+      printf("can't delete element with idx %d. list idx ends at %d\n",idxToDel,getLenOfList(start)-1);
+      return;
+    }
+
+    listElement *currElem = start;
+    listElement *delElem = start; // no need to pass start
+    for(int i = 0; i < idxToDel; i++){
+      currElem = currElem->nextElem;
+    }
+    delElem = currElem->nextElem;
+    currElem->nextElem = (currElem->nextElem)->nextElem;
+    // currElem->nextElem = delElem->nextElem;
+    free(delElem);  
+  }
 }
+
+
 
 void delList(listElement *start){
-
-    printf("\n>> getLenOfList fcn is tbd.\n\n");
-
+    
+    if(start->nextElem == NULL) printf("list is empty\n");
+    else{
+        listElement *currElem = start;
+        listElement *delElem;
+    while (currElem->nextElem != NULL) {
+        delElem=currElem;
+        currElem->nextElem=(currElem->nextElem)->nextElem;
+        free(delElem);
+    }
 }
-
+}
 int getLenOfList(listElement *start){ // we use this for save list fcn
 
     int counter = 0;
@@ -100,7 +131,7 @@ int saveList(listElement *start){
 
         printf("list was successfully saved!\n");
         fclose(fPtr);	
-        // please add a >return< statement as this function is of type int
+        return 0;
 }
 
 
@@ -156,9 +187,19 @@ int loadList(listElement *start){
 
 void exitFcn(listElement *start){
 
-    printf("\n>> exitFcn fcn is tbd.\n\n");
+  int saveFlagg = 0;
+
+  printf("do you want to save the current list?\n");
+  printf("[1] ... yes\n");
+  printf("[0] ... no\n");
+  scanf("%d",&saveFlagg);
+
+  if (saveFlagg == 1) saveList(start);
+  system("cls");
+
 
 }
+
 
 void sortList(listElement *start){
 	
