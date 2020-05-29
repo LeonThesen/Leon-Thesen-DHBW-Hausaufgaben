@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "linkedListLib.h"
+#include "linkedListLib.h" // dont to forget to rename the includes !
 
 void addListElem(listElement *start){
     
@@ -268,7 +268,7 @@ void sortList(listElement *start){
                     }
 
                 if (swapFLAGG){ 
-                    listElement * tempPtr;
+                    listElement * tempPtr; // this will be created new in each loop -1Pkt
                      tempPtr = currElem->nextElem;
                      currElem->nextElem = (currElem->nextElem)->nextElem;
                      tempPtr->nextElem = currElem;
@@ -303,8 +303,12 @@ void stringToLower(char *string) {
 	}
     printf("\n\n");
 }
-
-
+/*
+JW-2020-05-29:
+--------------
+> well done (9/10) !
+> listElement * tempPtr; in each loop: -1Pkt you dont need this extra pointer at all
+*/
 
 
 
