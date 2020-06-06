@@ -8,7 +8,7 @@
             "name": "gcc.exe - Aktive Datei erstellen und debuggen",
             "type": "cppdbg",
             "request": "launch",
-            "program": "C:/Users/leon2/Documents/GitHub/Leon-Thesen-DHBW-Hausaufgaben/HA04\\main.exe",
+            "program": "C:/Users/leon2/Documents/GitHub/Leon-Thesen-DHBW-Hausaufgaben/HA04/main.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "C:/Users/leon2/Documents/GitHub/Leon-Thesen-DHBW-Hausaufgaben/HA04",
