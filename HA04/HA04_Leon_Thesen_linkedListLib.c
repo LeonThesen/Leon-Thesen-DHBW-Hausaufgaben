@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "linkedListLib.h" // dont to forget to rename the includes !
+#include "HA04_Leon_Thesen_linkedListLib.h" // dont to forget to rename the includes !
 
 void addListElem(listElement *start){
     
