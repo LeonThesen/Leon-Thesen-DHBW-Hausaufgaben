@@ -23,7 +23,7 @@ int main(){
 
     for(int i = 0; i < maxIter; i++){
         step=step+h;
-        RHS(&f,&x);
+        RHS(&f,&x); //f steigung x ist y
         x= x+ h* f;
         fprintf(fp,"%lf %lf\n",step,x);
     }

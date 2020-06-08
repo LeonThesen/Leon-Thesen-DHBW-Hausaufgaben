@@ -5,16 +5,16 @@ void RHS_MSD(double*rhs, double*y){
 
     double m = 1.0; // mass of object
     double c = 5.0; // spring constant
-    double d = 1.25; // damper constant
+    double d = 4; // damper constant
 
     double x = y[0]; // position
     double v = y[1]; // speed
 
     double x_dot=0;
     double v_dot=0;
-     x_dot=v;
+     
      v_dot=-((d/m)*v+(c/m)*x);
-
+     x_dot=v;
     rhs[0] = x_dot;
     rhs[1] = v_dot;
 }
