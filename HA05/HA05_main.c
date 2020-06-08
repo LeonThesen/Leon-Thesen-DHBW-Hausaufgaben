@@ -36,8 +36,7 @@ int main(){
     }
 
     double rhs[NUMOFSTATES]; // create rhs
-    double y_old[NUMOFSTATES]; // state vector
-    double y_new[NUMOFSTATES]; // state vector
+    double y[NUMOFSTATES]; // state vector
 
     double h = 2e-2; // stepsize for integrator
     double simTime = 12; // time of simulation in seconds
@@ -45,20 +44,19 @@ int main(){
     // init all vecs to zero //
     for(int i = 0; i < NUMOFSTATES; i++){
         rhs[i] = 0;
-        y_old[i] = 0;
-        y_new[i] = 0;
+        y[i] = 0;
     }
 
     // init x and v //  
-    y_old[0] = 1; // location 
-    y_old[1] = 0; // speed
+    y[0] = 1; // location 
+    y[1] = 0; // speed
 
     // euler forward //
     for(int i = 0; i < simTime/h; i++){   //simtime/h == max. Schrittanzahl
             fprintf(fp,"%lf %lf %lf\n",(h*i),y_old[0],y_old[1]);
             RHS_MSD(rhs,y_old);
-            y_old[0]= y_old[0]+rhs[0]*h;
-            y_old[1]= y_old[1]+rhs[1]*h;    
+            y[0]= y[0]+rhs[0]*h;
+            y[1]= y[1]+rhs[1]*h;    
     }
 
     fclose(fp);
