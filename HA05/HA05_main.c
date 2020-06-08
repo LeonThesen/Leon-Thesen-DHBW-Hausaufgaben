@@ -53,7 +53,7 @@ int main(){
 
     // euler forward //
     for(int i = 0; i < simTime/h; i++){   //simtime/h == max. Schrittanzahl
-            fprintf(fp,"%lf %lf %lf\n",(h*i),y_old[0],y_old[1]);
+            fprintf(fp,"%lf %lf %lf\n",(h*i),y[0],y[1]);
             RHS_MSD(rhs,y_old);
             y[0]= y[0]+rhs[0]*h;
             y[1]= y[1]+rhs[1]*h;    
