@@ -49,25 +49,28 @@ int main(){
         y_new[i] = 0;
     }
 
-    // init x and v //
+    // init x and v //  
     y_old[0] = 1; // location 
     y_old[1] = 0; // speed
 
     // euler forward //
-    for(int i = 0; i < simTime/h; i++){
+    for(int i = 0; i < simTime/h; i++){   //simtime/h == max. Schrittanzahl
+            
+        
         /* YOUR CODE HERE */
-        /* ---------------- 
+         
+
+            fprintf(fp,"%lf %lf %lf",simTime,y_old[0],y_old[1]);
+        //    2.) Write the results to results.txt
+        //        Hint: Format needs to be: timestep location speed \n 
+            RHS_MSD(rhs,y_old);
+
+           // 3.) Call right-hand-side of mass-spring-damper system RHS_MSD
 
 
-            2.) Wirte the results to results.txt
-                Hint: Format needs to be: timestep location speed \n 
-
-
-            3.) Call right-hand-side of mass-spring-damper system RHS_MSD
-
-
-            4.) Update the state vector (location and speed)
-
+           // 4.) Update the state vector (location and speed)
+            y_old[0]= y_old[0]+rhs[0]*h;
+            y_old[1]= rhs[0];
             
     */
     }

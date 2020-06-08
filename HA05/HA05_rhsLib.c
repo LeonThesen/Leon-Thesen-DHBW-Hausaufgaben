@@ -10,14 +10,10 @@ void RHS_MSD(double*rhs, double*y){
     double x = y[0]; // position
     double v = y[1]; // speed
 
-    /* YOUR CODE HERE */
-    /* ---------------- 
-
-
-        1.) Implement the DGL-System (7) & (8)
-            Hint: This is only to lines of code
-
-    */
+    double x_dot=0;
+    double v_dot=0;
+     x_dot=v;
+     v_dot=-((d/m)*v+(c/m)*x);
 
     rhs[0] = x_dot;
     rhs[1] = v_dot;
